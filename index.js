@@ -44,10 +44,6 @@ app.get("/", (req, res) => {
   res.send("Subscribe to Arpan Neupane's channel");
 });
 
-app.listen(port, () => {
-  `Server started on port ${port}`;
-});
-
 // const currentAttempts = await userAttemptsModel.findOne({email: "test@gmail.com"})
 // userAttemptsModel.findOneAndUpdate({email: "test@gmail.com", attempts: currentAttempts.attempts+1}).then(res => console.log(res)).catch(err => console.log(err))
 
