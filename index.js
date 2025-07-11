@@ -33,7 +33,8 @@ app.use('/api/digest', DigestRoutes)
 
 mongoose.set('strictQuery', true)
 mongoose
-    .connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_NAME}.ajnurbv.mongodb.net/?retryWrites=true&w=majority`)
+    mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.fc98fij.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+
     .then(() => {
         app.listen(process.env.PORT)
         console.log("Server running...")
